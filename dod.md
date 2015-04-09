@@ -1,0 +1,12 @@
+- koodi on siistiä
+- koodi on testattu tarpeeksi kattavasti
+- rspec-testit kirjoitettu
+- rspec-testit menevät läpi
+- capybara-testit tehty
+- capybara-testit menevät läpi
+- dokumentaatio ajan tasalla
+- dokumentaatio riittävän kattavaa
+- koodi on vertaisarvioitu
+- koodi on githubissa
+- travis-build ok
+- laitettu tuotantoon
