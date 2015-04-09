@@ -1,0 +1,20 @@
+
+
+
+
+- koodi on siistiä
+- koodi on testattu tarpeeksi kattavasti
+- yksikkötestit kirjoitettu
+- yksikkötestit menevät läpi
+- integraatiotestit tehty
+- integraatiotestit menevät läpi
+- dokumentaatio ajan tasalla
+- easyB-testit kirjoitettu
+- easyB-testit menevät läpi
+- dokumentaatio riittävän kattavaa
+- koodi on vertaisarvioitu
+- koodi on githubissa
+- jenkins-build ok
+- laitettu tuotantoon
+- cobertura-raportit generoitu
+
