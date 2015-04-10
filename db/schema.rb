@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410220951) do
+ActiveRecord::Schema.define(version: 20150410223233) do
 
   create_table "references", force: :cascade do |t|
-    t.string   "type"
+    t.string   "reference_type"
     t.string   "author"
     t.string   "title"
     t.string   "year"
     t.string   "publisher"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
