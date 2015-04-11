@@ -1,3 +1,6 @@
+##
+# Controller for Reference model
+
 class ReferencesController < ApplicationController
   before_action :set_reference, only: [:show, :edit, :update, :destroy]
 
