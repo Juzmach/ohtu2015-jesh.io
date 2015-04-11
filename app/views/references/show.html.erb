@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @reference.type %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @reference.author %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @reference.title %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @reference.year %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @reference.publisher %>
+</p>
+
+<%= link_to 'Edit', edit_reference_path(@reference) %> |
+<%= link_to 'Back', references_path %>
