@@ -1,3 +1,10 @@
 language: ruby
 rvm:
-  - 2.2.1
+- 2.2.1
+deploy:
+  provider: heroku
+  api_key:
+    secure: putPdb1pGCYxjUTbregQDkWxJjGC3LTNnFavFNJS9r9xILEogkZU1APoPbuOWBtWge3y+B7/uhlkQVWaR76NvZ/krU/GmPI6EEJjdPsz3snTaETqFh1oJm/QFK7kdCyaGDvMawEVpzN1O28A3Qm6ugBDo4LjBSuyYKTzpKLE7lw=
+  app: bibtexia
+  on:
+    repo: Juzmach/ohtu2015-jesh.io
