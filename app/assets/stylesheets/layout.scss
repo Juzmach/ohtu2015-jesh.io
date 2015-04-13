@@ -1,0 +1,13 @@
+$primary-background-color: #F2F1EF;
+$primary-text-color: #6C7A89;
+$primary-link-color: #D2527F;
+$nav-background-color: #E08283;
+
+body {
+  background: $primary-background-color;
+  color: $primary-text-color;
+}
+
+a {
+  color: $primary-link-color;
+}
