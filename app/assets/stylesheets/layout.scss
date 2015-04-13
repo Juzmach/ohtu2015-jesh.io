@@ -1,0 +1,48 @@
+$primary-background-color: #F2F1EF;
+$primary-text-color: #6C7A89;
+$primary-link-color: #D2527F;
+$nav-background-color: #E08283;
+
+body {
+  background: $primary-background-color;
+  color: $primary-text-color;
+}
+
+a {
+  color: $primary-link-color;
+}
+
+a:hover,
+a:focus {
+  color: $primary-text-color;
+  text-decoration: none;
+}
+
+.navbar {
+  background: $nav-background-color;
+  color: $primary-background-color;
+  text-align: center;
+}
+
+.navbar-default .navbar-brand {
+  color: $primary-background-color;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: $primary-text-color;
+  background-color: transparent;
+}
+
+.btn-default {
+  background: $nav-background-color;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  background: $primary-text-color;
+}
+
+.centered {
+  text-align: center;
+}
