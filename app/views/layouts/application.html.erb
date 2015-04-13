@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
-
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="navbar-header">
+        <%= link_to 'Bibtexia', root_path, class: 'navbar-brand' %>
+      </div>
+    </nav>
+    <div class="container">
+        <%= yield %>
+    </div>
 </body>
 </html>
