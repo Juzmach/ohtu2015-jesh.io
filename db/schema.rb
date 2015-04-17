@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410223233) do
+ActiveRecord::Schema.define(version: 20150410220951) do
 
   create_table "references", force: :cascade do |t|
     t.string   "reference_type"
