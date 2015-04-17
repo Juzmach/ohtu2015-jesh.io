@@ -18,10 +18,12 @@ class ReferencesController < ApplicationController
   # GET /references/new
   def new
     @reference = Reference.new
+    @types = ["Book", "Article", "Inproceedings"]
   end
 
   # GET /references/1/edit
   def edit
+    @types = ["Book", "Article", "Inproceedings"]
   end
 
   # POST /references

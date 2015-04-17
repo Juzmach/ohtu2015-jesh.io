@@ -11,10 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :reference_type %><br>
-    <%= f.text_field :reference_type %>
-  </div>
+    <div class="field">
+      <%= f.label :reference_type %><br>
+      <%= f.select :reference_type, options_for_select(@types) %>
+    </div>
   <div class="field">
     <%= f.label :author %><br>
     <%= f.text_field :author %>
