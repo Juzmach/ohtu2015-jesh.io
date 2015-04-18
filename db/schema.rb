@@ -13,31 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150410220951) do
 
-  create_table "authors", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "bibtextrefs", force: :cascade do |t|
-    t.integer  "author_id"
-    t.integer  "journal_id"
-    t.string   "title"
-    t.integer  "year"
-    t.integer  "volume"
-    t.string   "pages"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "bibtextrefs", ["author_id"], name: "index_bibtextrefs_on_author_id"
-  add_index "bibtextrefs", ["journal_id"], name: "index_bibtextrefs_on_journal_id"
-
-  create_table "journals", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "references", force: :cascade do |t|
     t.string   "reference_type"
