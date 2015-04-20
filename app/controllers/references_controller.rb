@@ -3,6 +3,7 @@
 
 class ReferencesController < ApplicationController
   before_action :set_reference, only: [:show, :edit, :update, :destroy]
+  before_action :set_types, only: [:new, :edit, :create, :update]
 
   # GET /references
   # GET /references.json
@@ -18,12 +19,10 @@ class ReferencesController < ApplicationController
   # GET /references/new
   def new
     @reference = Reference.new
-    @types = ["Book", "Article", "Inproceedings"]
   end
 
   # GET /references/1/edit
   def edit
-    @types = ["Book", "Article", "Inproceedings"]
   end
 
   # POST /references
@@ -70,6 +69,11 @@ class ReferencesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_reference
       @reference = Reference.find(params[:id])
+    end
+
+    # Initialize types
+    def set_types
+      @types = ["Book", "Article", "Inproceedings"]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
