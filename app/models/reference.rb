@@ -14,4 +14,19 @@ class Reference < ActiveRecord::Base
 
   validates :publisher, presence: true
 
+  ##
+  # Bibtexify
+  # Prints out the model in BibTeX format. Reason why every line is put in separately is for later use, when we have
+  # multiple different types that have different formats.
+  def bibtexify
+  	bibtex = "@#{self.reference_type}{"
+  	bibtex += "#{self.author.split(' ')[0]}#{self.year},\n"
+  	bibtex += "	author = #{self.author},\n"
+  	bibtex += "	title = #{self.title},\n"
+  	bibtex += "	year = #{self.year},\n"
+  	bibtex += "	publisher = #{self.publisher}\n"
+  	bibtex += "}"
+  	bibtex
+  end
+
 end

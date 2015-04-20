@@ -29,4 +29,11 @@ describe Reference do
     expect(reference.valid?).to be(false)
   end
 
+  describe 'has a bibtexify method' do
+    it 'has a bibtexify method that returns a string' do
+      reference = Reference.create(author: 'Testington', title: 'Testing with Tests', year: 1999, publisher: 'Test Publisher')
+      expect(reference.bibtexify.is_a? String).to be(true)
+    end
+  end
+
 end

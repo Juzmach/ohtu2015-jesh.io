@@ -25,5 +25,10 @@
   <%= @reference.publisher %>
 </p>
 
+<p>
+  <strong>BibTeX:</strong>
+  <pre><%= @reference.bibtexify %></pre>
+</p>
+
 <%= link_to 'Edit', edit_reference_path(@reference) %> |
 <%= link_to 'Back', references_path %>
