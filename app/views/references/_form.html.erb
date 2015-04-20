@@ -1,13 +1,16 @@
 <%= form_for(@reference, html: {class: 'form-horizontal'}) do |f| %>
   <% if @reference.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@reference.errors.count, "error") %> prohibited this reference from being saved:</h2>
-
-      <ul>
-      <% @reference.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div id="error_explanation" class="panel panel-danger">
+      <div class="panel-heading">
+        <%= pluralize(@reference.errors.count, "error") %> prohibited this reference from being saved:
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @reference.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 

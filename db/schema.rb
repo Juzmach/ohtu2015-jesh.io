@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150410220951) do
 
-
   create_table "references", force: :cascade do |t|
     t.string   "reference_type"
     t.string   "author"
