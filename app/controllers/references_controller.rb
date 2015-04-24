@@ -69,11 +69,26 @@ class ReferencesController < ApplicationController
     end
   end
 
+  def export
+      createbib(Reference.all)
+      send_file 'public/export.bib'
+  end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_reference
       @reference = Reference.find(params[:id])
     end
+
+  def createbib(references)
+    open('public/export.bib', 'w') { |f|
+      references.each do |reference|
+        f.puts reference.bibtexify
+      end
+    }
+  end
 
     # Initialize types
     def set_types

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :references
+  get 'export_reference_path', to: 'references#export'
   
   root 'references#index'
+  get 'export_reference_path', to: 'reference#export'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
