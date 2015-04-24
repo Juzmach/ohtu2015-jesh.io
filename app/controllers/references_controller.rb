@@ -8,7 +8,11 @@ class ReferencesController < ApplicationController
   # GET /references
   # GET /references.json
   def index
-    @references = Reference.all
+    if params[:search]
+      @references = Reference.search(params[:search])
+    else
+      @references = Reference.all
+    end
   end
 
   # GET /references/1

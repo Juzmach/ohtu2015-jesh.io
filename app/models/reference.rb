@@ -29,4 +29,12 @@ class Reference < ActiveRecord::Base
   	bibtex
   end
 
+  def self.search(search)
+    if search
+      where('title LIKE ? OR author LIKE ? OR publisher LIKE ? OR year LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+    else
+      find(:all)
+    end
+  end
+
 end
