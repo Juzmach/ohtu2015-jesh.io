@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410220951) do
+ActiveRecord::Schema.define(version: 20150424161318) do
 
   create_table "references", force: :cascade do |t|
     t.string   "reference_type"
@@ -19,8 +19,20 @@ ActiveRecord::Schema.define(version: 20150410220951) do
     t.string   "title"
     t.string   "year"
     t.string   "publisher"
+    t.string   "volume"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "journal"
+    t.string   "number"
+    t.string   "pages"
+    t.string   "booktitle"
+    t.string   "editor"
+    t.string   "organization"
+    t.string   "series"
+    t.string   "edition"
+    t.string   "month"
+    t.string   "note"
+    t.string   "key"
   end
 
 end

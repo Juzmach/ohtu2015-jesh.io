@@ -6,7 +6,7 @@ class CreateReferences < ActiveRecord::Migration
       t.string :title
       t.string :year
       t.string :publisher
-
+      t.string :volume
       t.timestamps null: false
     end
   end

@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe Reference do
 
+  testParameters = {author: 'Testington', title: 'Testing with Tests', year: 1999, publisher: 'Test Publisher'}
+  moreTestParameters = {author: 'Testman', title: 'Testing and Tests', year: 2001, publisher: 'Test Publisher'}
 
   it 'has a type Book set correctly' do
     reference = Reference.create(reference_type: 'Book', author: 'A')
@@ -29,9 +31,28 @@ describe Reference do
     expect(reference.valid?).to be(false)
   end
 
+  context 'when filtering entries by search parameter' do 
+      
+    it 'finds only matching entries' do
+      searchParameters = "Testman"
+      Reference.create(testParameters)
+      Reference.create(moreTestParameters)
+      foundReferences = Reference.search(searchParameters)
+      expect(foundReferences.size).to eq(1)
+    end
+
+    it 'finds all entries with shared keyword' do
+      searchParameters = "Test"
+      Reference.create(testParameters)
+      Reference.create(moreTestParameters)
+      foundReferences = Reference.search(searchParameters)
+      expect(foundReferences.size).to eq(2)
+    end
+  end
+
   describe 'has a bibtexify method' do
     it 'has a bibtexify method that returns a string' do
-      reference = Reference.create(author: 'Testington', title: 'Testing with Tests', year: 1999, publisher: 'Test Publisher')
+      reference = Reference.create(testParameters)
       expect(reference.bibtexify.is_a? String).to be(true)
     end
   end
