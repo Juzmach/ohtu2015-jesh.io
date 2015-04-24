@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150424161318) do
     t.string   "month"
     t.string   "note"
     t.string   "key"
+    t.string   "address"
   end
 
 end
