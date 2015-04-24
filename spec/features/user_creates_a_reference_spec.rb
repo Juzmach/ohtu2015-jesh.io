@@ -24,4 +24,12 @@ feature 'User creates a reference' do
 		click_button 'Create Reference'
 		expect(page).to have_content("Mr. Capybara's journal")
 	end
+
+	scenario 'when they change reference type from book to article the form changes' do
+		visit new_reference_path
+
+		select('Article', from: 'reference_reference_type')
+
+		expect(page).to have_field('journal')
+	end
 end
