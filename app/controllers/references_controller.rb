@@ -69,6 +69,7 @@ class ReferencesController < ApplicationController
     end
   end
 
+  # Export form calls references#export. Creates bibtex file and sends it to user.
   def export
       createbib(Reference.all)
       send_file 'public/export.bib'
@@ -81,7 +82,7 @@ class ReferencesController < ApplicationController
     def set_reference
       @reference = Reference.find(params[:id])
     end
-
+# Creates the export.bib file in the public folder by calling bibtexify for every reference.
   def createbib(references)
     open('public/export.bib', 'w') { |f|
       references.each do |reference|
