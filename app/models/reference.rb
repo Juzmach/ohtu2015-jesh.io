@@ -29,6 +29,11 @@ class Reference < ActiveRecord::Base
   	bibtex
   end
 
+  ##
+  # Search
+  # Executes a query, filtering references that have the given parameter as a field or part of a field
+  # Checks fields author, publisher, year
+
   def self.search(search)
     if search
       where('title LIKE ? OR author LIKE ? OR publisher LIKE ? OR year LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")

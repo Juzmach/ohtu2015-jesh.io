@@ -7,6 +7,7 @@ class ReferencesController < ApplicationController
 
   # GET /references
   # GET /references.json
+  # if search parameters have been entered, filter references to be shown
   def index
     if params[:search]
       @references = Reference.search(params[:search])
