@@ -12,4 +12,5 @@
 .DS_Store
 .idea
 test/
-.yardoc
+.yardocpublic/export.bib
+public/export.bib

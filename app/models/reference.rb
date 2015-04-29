@@ -12,7 +12,7 @@ class Reference < ActiveRecord::Base
 
   validates :title, presence: true
 
-  validates :publisher, presence: true
+  # validates :publisher, presence: true
 
   ##
   # Bibtexify
