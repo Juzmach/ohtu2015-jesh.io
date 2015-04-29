@@ -9,4 +9,3 @@ deploy:
   on:
     repo: Juzmach/ohtu2015-jesh.io
   run: "rake db:reset"
-  run: "rake db:migrate"
