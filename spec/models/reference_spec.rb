@@ -26,11 +26,6 @@ describe Reference do
     expect(reference.valid?).to be(false)
   end
 
-  it 'does not save without a publisher' do
-    reference = Reference.create(author: 'A', title: 'T', year: 0, publisher: '')
-    expect(reference.valid?).to be(false)
-  end
-
   context 'when filtering entries by search parameter' do 
       
     it 'finds only matching entries' do
