@@ -9,3 +9,5 @@ Ohjelmistotuotanto 2015 miniprojekti
 [RDoc](http://www.rubydoc.info/github/Juzmach/ohtu2015-jesh.io)
 
 [Demo](http://bibtexia.herokuapp.com)
+
+[Raportti](http://tinyurl.com/jesh-io)
